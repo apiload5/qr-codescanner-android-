@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QR Code Scanner</string>
+    <string name="online_mode">Online Mode</string>
+    <string name="offline_mode">Offline Mode</string>
+</resources>
