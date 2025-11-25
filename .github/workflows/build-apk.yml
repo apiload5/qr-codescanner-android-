@@ -20,13 +20,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Validate Environment
-      run: |
-        echo "=== Java Version ==="
-        java -version
-        echo "=== Gradle Version ==="
-        ./gradlew --version || gradle --version
-        
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+      
     - name: Build with Gradle
       run: ./gradlew assembleDebug
       
