@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scanner - Offline Mode</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-qrcode"></i>
+                <h1>QR Scanner</h1>
+                <p>Offline Mode</p>
+            </div>
+        </div>
+
+        <div class="scanner-card">
+            <h2><i class="fas fa-camera"></i> Camera Scanner</h2>
+            
+            <div class="camera-container">
+                <video id="qr-video" playsinline></video>
+                <canvas id="qr-canvas"></canvas>
+                <div class="scanner-overlay">
+                    <div class="scanner-frame"></div>
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+            
+            <div class="scan-status" id="scan-status">Initializing camera...</div>
+            
+            <div class="controls">
+                <button id="start-button" class="btn btn-secondary">Start Camera</button>
+                <button id="stop-button" class="btn btn-danger">Stop Camera</button>
+            </div>
+        </div>
+
+        <div class="result-container" id="result-container">
+            <div class="result-card">
+                <h2>Scan Result</h2>
+                <div id="result-text">No QR code detected</div>
+                <div class="action-buttons">
+                    <button id="copy-button" class="btn">Copy Text</button>
+                    <a id="open-link" class="btn btn-secondary" style="display: none;" target="_blank">Open Link</a>
+                    <button id="new-scan-button" class="btn">New Scan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="offline-notice">
+            <i class="fas fa-wifi-slash"></i>
+            You are in offline mode. Basic QR scanning is available.
+        </div>
+    </div>
+
+    <script src="js/jsQR.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
